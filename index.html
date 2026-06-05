@@ -340,6 +340,7 @@
       pointer-events:none;
       transition: opacity .25s ease;
     }
+    .doneOverlay.active{ opacity:1; pointer-events:auto; }
     @keyframes bounce{
       to{ transform: translateY(-8px) scale(1.1); }
     }
@@ -517,13 +518,13 @@
 
       const openW = noteW + openHeart;
       const padX = Math.ceil(openW / 2);
-      const padY = 140;
+      const padY = 80;
 
       return {
-        padLeft: clamp(padX, 24, Math.floor(vw * 0.45)),
-        padRight: clamp(padX, 24, Math.floor(vw * 0.45)),
-        padTop: clamp(padY, 90, Math.floor(vh * 0.45)),
-        padBottom: clamp(padY, 90, Math.floor(vh * 0.45))
+        padLeft: clamp(padX, 10, Math.floor(vw * 0.3)),
+        padRight: clamp(padX, 10, Math.floor(vw * 0.3)),
+        padTop: clamp(padY, 50, Math.floor(vh * 0.3)),
+        padBottom: clamp(padY, 50, Math.floor(vh * 0.3))
       };
     }
 
