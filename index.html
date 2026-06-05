@@ -517,14 +517,14 @@
       const openHeart = parseFloat(styles.getPropertyValue('--open-heart')) || 180;
 
       const openW = noteW + openHeart;
-      const padX = Math.ceil(openW / 2);
-      const padY = 80;
+      const padX = 20;
+      const padY = 50;
 
       return {
-        padLeft: clamp(padX, 10, Math.floor(vw * 0.3)),
-        padRight: clamp(padX, 10, Math.floor(vw * 0.3)),
-        padTop: clamp(padY, 50, Math.floor(vh * 0.3)),
-        padBottom: clamp(padY, 50, Math.floor(vh * 0.3))
+        padLeft: padX,
+        padRight: padX,
+        padTop: padY,
+        padBottom: padY
       };
     }
 
@@ -536,7 +536,7 @@
       const vw = field.clientWidth;
       const vh = field.clientHeight;
 
-      const topSafe = 70;
+      const topSafe = 40;
       const pads = getSafePadding();
 
       for(let i=0;i<count;i++){
